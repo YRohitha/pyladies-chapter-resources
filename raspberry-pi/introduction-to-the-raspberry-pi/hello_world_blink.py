@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 
 # Blink the LED 20 times
-for i in range(20):
+for _ in range(20):
     # Output high (3.3 volts) on pin 20, to turn the LED on
     GPIO.output(20, 1)
     # Leave the LED on for one second
@@ -27,4 +27,4 @@ GPIO.cleanup()
 # Why not? :-)
 print("Hello World!")
 # This will print some general info about your Raspberry Pi
-print("Raspberry Pi stats: {}".format(GPIO.RPI_INFO))
+print(f"Raspberry Pi stats: {GPIO.RPI_INFO}")
